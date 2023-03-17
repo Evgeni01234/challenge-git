@@ -1,4 +1,4 @@
-# Git Challenge
+﻿# Git Challenge
 There are two branches, `add-echo` and `add-reverse`. The goal of this challenge is to use `git rebase` to bring both commits onto master. When finished there should be no merge commits or branching. For example, `git log` on the `master` branch should look similar to this:
 ```
 /challenge-git master
@@ -16,3 +16,21 @@ How to attempt this challenge:
 4) Set your new repo as the origin: `git remote set-url origin ${your repo url}`
 5) Push your solution to your repo
 You must follow these steps for your solution to be accepted -- forks or other methods will not be considered.
+
+## Solution
+
+git clone original-repo-url
+
+cd challenge-git
+
+git checkout add-echo
+
+git checkout add-reverse
+
+git rebase --onto master add-echo add-reverse
+
+git log
+
+git remote set-url origin my-repo-url
+
+git push origin master
